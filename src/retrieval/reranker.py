@@ -71,7 +71,7 @@ def _batch_score(query: str, chunks: list[dict], client: genai.Client) -> list[i
     )
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.5-flash",
             contents=prompt,
             config=genai.types.GenerateContentConfig(
                 response_mime_type="application/json",

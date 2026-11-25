@@ -91,7 +91,7 @@ def classify_intent(query: str, client: genai.Client = None) -> dict:
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.5-flash",
             contents=_INTENT_PROMPT.format(query=query),
             config=genai.types.GenerateContentConfig(
                 response_mime_type="application/json",

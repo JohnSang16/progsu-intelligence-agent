@@ -57,7 +57,7 @@ Text:
 {text}"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash", contents=prompt
+            model="gemini-3.5-flash", contents=prompt
         )
         # Near-empty input (e.g. a 1-char doc) can come back with
         # finish_reason=STOP but zero output tokens, so response.text is None

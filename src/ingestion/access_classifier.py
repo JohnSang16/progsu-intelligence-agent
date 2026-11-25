@@ -63,7 +63,7 @@ def classify_chunk_access(text: str, client: genai.Client, known_financial: bool
         return {"level": ACCESS_MEMBER, "redacted": None}
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.5-flash",
             contents=_JUDGE_PROMPT.format(text=text[:6000]),
             config=genai.types.GenerateContentConfig(
                 response_mime_type="application/json",

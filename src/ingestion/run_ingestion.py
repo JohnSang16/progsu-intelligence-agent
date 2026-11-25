@@ -175,7 +175,7 @@ def _aggregate_with_gemini(raw_text: str, agg_type: str, client: genai.Client) -
         prompt = _INTERVIEW_AGG_PROMPT.format(interview_text=raw_text[:12_000])
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash", contents=prompt
+            model="gemini-3.5-flash", contents=prompt
         )
         return response.text.strip()
     except Exception as e:

@@ -139,13 +139,13 @@ export const ClaudeChatInput: React.FC<ChatInputProps> = ({
   const [message, setMessage] = useState("");
   const [files, setFiles] = useState<AttachedFile[]>([]);
   const [isDragging, setIsDragging] = useState(false);
-  const [selectedModel, setSelectedModel] = useState("gemini-2.5-flash");
+  const [selectedModel, setSelectedModel] = useState("gemini-3.5-flash");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const models: ChatInputModel[] = [
-    { id: "gemini-2.5-flash", name: "Gemini 2.5 Flash", description: "Best quality answers" },
-    { id: "gemini-2.5-flash", name: "Gemini 2.5 Flash", description: "Fast responses" },
+    { id: "gemini-3.5-flash", name: "Gemini 2.5 Flash", description: "Best quality answers" },
+    { id: "gemini-3.5-flash", name: "Gemini 2.5 Flash", description: "Fast responses" },
   ];
 
   // Sync external inputValue (e.g. from suggestion chips)
